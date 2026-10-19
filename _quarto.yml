@@ -1,7 +1,8 @@
 project:
   type: book
   output-dir: docs
-
+execute:
+  freeze: false
 book:
   title: "GEOU9SP GIS Workbook"
   author: "Thiago Silva, Allan Audsley, Lindis Kipp"
