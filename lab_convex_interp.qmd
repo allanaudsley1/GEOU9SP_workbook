@@ -6,31 +6,31 @@ This exercise will be based on actual research data collected by [Dr. Adam Fell]
 
 Adam has monitored the movement of bird species in Panama, to understand how land cover affects their movement and behaviour. He used GPS tracking tags attached via Teflon strings, like a backpack, to the back of the bird. The tags were programmed to measure locations from every 30 mins to every two hours during daytime (05:00 – 19:00), with bursts of every 30 mins if the batteries were fully charged. At night, the tags were scheduled to turn off to save battery energy, knowing that after dark, these species would not be active. Along with the GPS module, each tag also measured three-dimensional acceleration (ACC). Since ACC measurements consumed very little energy, the tags were programmed to take ACC measurements every 10 mins during a 24-hour period. These measurements confirmed little activity during night-time hours. Data was first stored on the device, then remotely downloaded through a radio link once a week to ensure that the device had not fallen off the individual. 
 
-The data consists of a Comma Separated Values (CSV) file containing the location, timestamp, and other information for each tracking tag, and [can be downloaded here](https://stir-my.sharepoint.com/:u:/g/personal/ala2_stir_ac_uk/EeG76lKhlLRNjQgGBJOIJYoBxn0ZWhxwjQOhnFiB0LFejQ?e=mZ4qmR). The original data is hosted by the [Movebank database](https://www.movebank.org/cms/webapp?gwt_fragment=page=studies,path=study2074159777), a global database of animal movement data. 
+The data consists of a Comma Separated Values (CSV) file containing the location, timestamp, and other information for each tracking tag, and [can be downloaded here]https://stir-my.sharepoint.com/:f:/g/personal/ala2_stir_ac_uk/IgAYO83VIdxTSL9NTWDd9KdWAYUXfw1AYx4IFj6k1HWw7lE?e=iGfeu9). The original data is hosted by the [Movebank database](https://www.movebank.org/cms/webapp?gwt_fragment=page=studies,path=study2074159777), a global database of animal movement data. 
 
 In total, there are four bird species monitored:
 
 *Ortalis cinereiceps* ([grey-headed Chachalaca](https://en.wikipedia.org/wiki/Grey-headed_chachalaca)): three individuals, identified in the `individual_local_identifier` field as `Chachalaca_1` to `_4`.
 
-![By Kathy & Sam from Beaverton OR, USA CC BY 2.0](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ortalis_cinereiceps_-near_Rancho_Naturalista%2C_Cordillera_de_Talamanca%2C_Costa_Rica-8.jpg/640px-Ortalis_cinereiceps_-near_Rancho_Naturalista%2C_Cordillera_de_Talamanca%2C_Costa_Rica-8.jpg)
+![By Kathy & Sam from Beaverton OR, USA CC BY 2.0](https://en.wikipedia.org/wiki/Grey-headed_chachalaca#/media/File:Gray-headed_chachalacas_(34008).jpg)
 
 *Ramphastos swainsonii* ([Chestnut-mandibled Toucan](https://en.wikipedia.org/wiki/Chestnut-mandibled_toucan)): two individuals identified in the `individual_local_identifier` field as `Chesnut_1` and `_2`.\
 
-![chuck624 from Upstate NY, USA, CC BY 2.0](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ramphastos_ambiguus_-Costa_Rica-8a_%281%29.jpg/577px-Ramphastos_ambiguus_-Costa_Rica-8a_%281%29.jpg)
+![chuck624 from Upstate NY, USA, CC BY 2.0](https://en.wikipedia.org/wiki/Chestnut-mandibled_toucan#/media/File:Ramphastos_ambiguus_-Costa_Rica-8a_(1).jpg)
 
 *Ramphastos sulfuratus* ([Keel-billed Toucan](https://en.wikipedia.org/wiki/Keel-billed_toucan)): two individuals identified in the `individual_local_identifier` field as `Keel-billed_1` and `_2`.
 
-![Chris Down, CC BY 2.0](https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Keel-billed_toucan_in_Costa_Rica.jpg/480px-Keel-billed_toucan_in_Costa_Rica.jpg)
+![Chris Down, CC BY 2.0](https://en.wikipedia.org/wiki/Keel-billed_toucan#/media/File:Keel-billed_toucan_(Ramphastos_sulfuratus_sulfuratus)_on_foxtail_palm_(Wodyetia_bifurcata)_Cayo.jpg)
 
 *Amazona autumnalis* ([Red-lored parrot](https://en.wikipedia.org/wiki/Red-lored_amazon)): one individual identified in the `individual_local_identifier` field as `Parrot_1`.
 
-![Tomasz Wagner from Burnaby, BC, Canada, CC BY 2.0 ](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Amazona_autumnalis_-Xcaret_theme_park_-Riviera_Maya-8a.jpg/389px-Amazona_autumnalis_-Xcaret_theme_park_-Riviera_Maya-8a.jpg)
+![Tomasz Wagner from Burnaby, BC, Canada, CC BY 2.0 ](https://upload.wikimedia.org/wikipedia/commons/6/6f/Red-lored_parrot.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
 
 There is also a GeoTIFF raster with land cover data for the same region, obtained from the [ESRI Living Atlas Sentinel-2 10m Global Land Cover](https://www.arcgis.com/home/item.html?id=cfcb7609de5f478eb7666240902d4d3d)  dataset.
 
 ### Preparing the data
 
-(@) [Download the data](https://stir-my.sharepoint.com/:u:/g/personal/ala2_stir_ac_uk/EeG76lKhlLRNjQgGBJOIJYoBxn0ZWhxwjQOhnFiB0LFejQ?e=mZ4qmR) and create a project folder and a new QGIS project. 
+(@) [Download the data](https://stir-my.sharepoint.com/:f:/g/personal/ala2_stir_ac_uk/IgAYO83VIdxTSL9NTWDd9KdWAYUXfw1AYx4IFj6k1HWw7lE?e=iGfeu9) and create a project folder and a new QGIS project. 
 
 (@) Then import the bird movement data using the `Source Data Manager > Delimited Text`, like in the figure below. Make sure you pick the CRS indicated (`EPSG:32617 WGS84 - UTM zone 17N`), and that the `timestamp` field is of type `Date & Time`.
 
